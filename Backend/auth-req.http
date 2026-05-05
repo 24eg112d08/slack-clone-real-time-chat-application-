@@ -1,0 +1,25 @@
+### Register User
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "email": "test@gmail.com",
+    "password": "123456"
+}
+
+###
+
+### Login User
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "123456"
+}
+
+###
+
+### Logout (optional)
+GET http://localhost:5000/auth/logout

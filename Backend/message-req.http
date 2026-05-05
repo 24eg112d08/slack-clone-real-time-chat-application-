@@ -1,0 +1,15 @@
+### Send Message
+POST http://localhost:5000/message-api/message
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+    "channelId": "CHANNEL_ID",
+    "content": "Hello from Slack Clone"
+}
+
+###
+
+### Get Messages
+GET  http://localhost:5000/message-api/messages/CHANNEL_ID
+Authorization: Bearer YOUR_TOKEN

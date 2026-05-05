@@ -1,0 +1,14 @@
+### Create Channel
+POST http://localhost:5000/channel-api/channel
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+    "name": "general"
+}
+
+###
+
+### Get All Channels
+GET  http://localhost:5000/channel-api/channels
+Authorization: Bearer YOUR_TOKEN
