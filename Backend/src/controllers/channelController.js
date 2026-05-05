@@ -1,0 +1,10 @@
+export const getAllChannels = (req, res) => res.json({ message: "getAllChannels" });
+export const createChannel = (req, res) => res.json({ message: "createChannel" });
+export const getChannelById = (req, res) => res.json({ message: "getChannelById", id: req.params.channelId });
+export const updateChannel = (req, res) => res.json({ message: "updateChannel" });
+export const deleteChannel = (req, res) => res.json({ message: "deleteChannel" });
+export const joinChannel = (req, res) => res.json({ message: "joinChannel" });
+export const leaveChannel = (req, res) => res.json({ message: "leaveChannel" });
+export const getChannelMembers = (req, res) => res.json({ message: "getChannelMembers" });
+export const addMember = (req, res) => res.json({ message: "addMember" });
+export const removeMember = (req, res) => res.json({ message: "removeMember", userId: req.params.userId });
