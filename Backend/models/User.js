@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 
+// User model schema defines the structure for user documents in MongoDB.
+// Includes username, email, password, avatar URL, and a user role.
 const userSchema = new mongoose.Schema(
   {
     username: {
@@ -30,4 +32,5 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Timestamps create createdAt and updatedAt fields automatically.
 export default mongoose.model("User", userSchema);

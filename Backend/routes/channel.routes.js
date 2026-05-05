@@ -7,7 +7,8 @@ import { protect } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
 
-router.post("/channel", protect, createChannel);
-router.get("/channels", protect, getChannels);
+// Channel routes are protected and require a valid JWT token.
+router.post("/channel", protect, createChannel); // Create a new channel.
+router.get("/channels", protect, getChannels); // Get the list of all channels.
 
 export default router;

@@ -7,7 +7,8 @@ import { protect } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
 
-router.post("/message", protect, sendMessage);
-router.get("/messages/:channelId", protect, getMessages);
+// Message routes require authentication and allow sending/getting messages.
+router.post("/message", protect, sendMessage); // Send a new message.
+router.get("/messages/:channelId", protect, getMessages); // Retrieve messages for a channel.
 
 export default router;

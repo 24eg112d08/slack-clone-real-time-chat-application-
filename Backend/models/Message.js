@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// Message model schema represents a chat message inside a channel.
 const messageSchema = new mongoose.Schema(
   {
     sender: {
@@ -22,4 +23,5 @@ const messageSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Attachments are stored as a list of file path strings if any files are included.
 export default mongoose.model("Message", messageSchema);

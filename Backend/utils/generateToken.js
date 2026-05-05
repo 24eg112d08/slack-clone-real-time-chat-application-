@@ -1,10 +1,6 @@
 import jwt from "jsonwebtoken";
 
-/**
- * Generate JWT token for a user
- * @param {string} userId
- * @returns {string} token
- */
+// Create a signed JWT token for a user ID, valid for 7 days.
 export const generateToken = (userId) => {
   return jwt.sign(
     { id: userId },
