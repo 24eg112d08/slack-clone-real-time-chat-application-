@@ -1,27 +1,25 @@
 import mongoose from "mongoose";
 
-const channelSchema = new mongoose.Schema(
+const messageSchema = new mongoose.Schema(
   {
-    name: {
+    sender: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+    channelId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Channel",
+    },
+    content: {
       type: String,
       required: true,
     },
-    isPrivate: {
-      type: Boolean,
-      default: false,
-    },
-    members: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-      },
-    ],
-    createdBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+    attachments: {
+      type: [String],
+      default: [],
     },
   },
   { timestamps: true }
 );
 
-export default mongoose.model("Channel", channelSchema);
+export default mongoose.model("Message", messageSchema);
